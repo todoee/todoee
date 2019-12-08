@@ -15,7 +15,7 @@
 	<name>todoee-core</name>
 
 	<properties>
-		<netty.version>4.1.32.Final</netty.version>
+		<netty.version>4.1.42.Final</netty.version>
 		<httpclient.version>4.3.6</httpclient.version>
 		<jcommander.version>1.72</jcommander.version>
 	</properties>
