@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>io.todoee</groupId>
+	<artifactId>todoee</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+
+	<name>todoee</name>
+
+	<packaging>pom</packaging>
+
+	<modules>
+		<module>todoee-base</module>
+		<module>todoee-faces</module>
+		<module>todoee-dao</module>
+		<module>todoee-dao-async</module>
+		<module>todoee-core</module>
+		<module>todoee-config</module>
+		<module>todoee-httpclient</module>
+		<module>todoee-httpclient-async</module>
+		<module>todoee-web</module>
+		<module>todoee-web-async</module>
+		<module>todoee-finder</module>
+		<module>todoee-quartz</module>
+		<module>todoee-wsg</module>
+		<module>todoee-service</module>
+		<module>todoee-service-ref</module>
+		<module>todoee-cluster-zk</module>
+		<module>todoee-cluster-hazelcast</module>
+	</modules>
+
+	<properties>
+		<repository.baseurl>http://36.111.185.78:10009/nexus/content/repositories</repository.baseurl>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<jdk.version>1.8</jdk.version>
+
+		<maven-compiler-plugin.version>3.6.1</maven-compiler-plugin.version>
+		<maven-surefire-plugin.version>2.20</maven-surefire-plugin.version>
+		
+		<vertx.version>3.7.1</vertx.version>
+	</properties>
+
+	<dependencies>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven-compiler-plugin.version}</version>
+				<configuration>
+					<source>${jdk.version}</source>
+					<target>${jdk.version}</target>
+					<encoding>${project.build.sourceEncoding}</encoding>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${maven-surefire-plugin.version}</version>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<version>3.0.1</version>
+				<configuration>
+					<attach>true</attach>
+				</configuration>
+				<executions>
+					<execution>
+						<phase>install</phase>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<url>${repository.baseurl}/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<url>${repository.baseurl}/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+</project>

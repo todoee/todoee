@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration status="OFF" xmlns:xi="http://www.w3.org/2001/XInclude" 
+	monitorInterval="30" >
+	<appenders>
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level [%logger{36}] [%X{traceId}] - %msg%n" />
+		</Console>
+	</appenders>
+	
+	<loggers>
+		<logger name="org.apache.curator" level="info" additivity="false">  
+	        <appender-ref ref="Console" />  
+	    </logger>
+		<logger name="io.netty" level="info" additivity="false">  
+	        <appender-ref ref="Console" />  
+	    </logger>
+		<logger name="org.apache.zookeeper" level="info" additivity="false">  
+	        <appender-ref ref="Console" />  
+	    </logger>
+		<root level="trace">
+			<appender-ref ref="Console" />
+		</root>
+	</loggers>
+</configuration> 

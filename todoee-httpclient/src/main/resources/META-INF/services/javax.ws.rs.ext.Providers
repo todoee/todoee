@@ -1,0 +1,2 @@
+com.colobu.fastjson.FastJsonProvider
+io.todoee.httpclient.filter.HttpClientExceptionFilter

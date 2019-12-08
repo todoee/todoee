@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>io.todoee</groupId>
+		<artifactId>todoee</artifactId>
+		<version>1.0.0-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>todoee-dao-async</artifactId>
+	<name>todoee-dao-async</name>
+
+	<properties>
+		<ignite.version>2.7.0</ignite.version>
+		<reflections.version>0.9.9</reflections.version>
+		<druid.version>1.0.31</druid.version>
+		<mysql-connector-java.version>5.1.42</mysql-connector-java.version>
+		<junit.version>4.12</junit.version>
+		<HikariCP.version>3.3.1</HikariCP.version>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>todoee-core</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>${mysql-connector-java.version}</version>
+		</dependency>
+		
+		<dependency>
+		 <groupId>io.vertx</groupId>
+		 <artifactId>vertx-jdbc-client</artifactId>
+		 <version>${vertx.version}</version>
+		 <exclusions>
+		 	<exclusion>
+		 		<groupId>io.vertx</groupId>
+		 		<artifactId>vertx-core</artifactId>
+		 	</exclusion>
+		 	<exclusion>
+		 		<groupId>com.mchange</groupId>
+		 		<artifactId>c3p0</artifactId>
+		 	</exclusion>
+		 </exclusions>
+		</dependency>
+		<dependency>
+		  <groupId>com.zaxxer</groupId>
+		  <artifactId>HikariCP</artifactId>
+		  <version>${HikariCP.version}</version>
+		  <exclusions>
+		  	<exclusion>
+		  		<artifactId>slf4j-api</artifactId>
+		  		<groupId>org.slf4j</groupId>
+		  	</exclusion>
+		  </exclusions>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.reflections</groupId>
+			<artifactId>reflections</artifactId>
+			<version>${reflections.version}</version>
+			<exclusions>
+				<exclusion>
+					<artifactId>annotations</artifactId>
+					<groupId>com.google.code.findbugs</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>guava</artifactId>
+					<groupId>com.google.guava</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>${junit.version}</version>
+			<scope>test</scope>
+		</dependency>
+		
+	</dependencies>
+</project>

@@ -1,0 +1,2 @@
+io.todoee.faces.handler.StaticHandlerExtension
+io.todoee.faces.handler.GzipHandlerExtension

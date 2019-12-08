@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-fragment id="meedo-finder" version="3.1"
+	xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-fragment_3_1.xsd">
+	
+	<servlet>
+		<servlet-name>finder-connector</servlet-name>
+		<servlet-class>io.meedo.finder.servlet.ConnectorServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>finder-connector</servlet-name>
+		<url-pattern>/connector</url-pattern>
+	</servlet-mapping>
+	
+</web-fragment>
