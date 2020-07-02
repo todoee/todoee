@@ -17,7 +17,7 @@
 		<ignite.version>2.7.0</ignite.version>
 		<reflections.version>0.9.9</reflections.version>
 		<druid.version>1.0.31</druid.version>
-		<mysql-connector-java.version>5.1.42</mysql-connector-java.version>
+		<mysql-connector-java.version>8.0.16</mysql-connector-java.version>
 	</properties>
 
 	<dependencies>
