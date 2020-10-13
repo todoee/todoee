@@ -18,7 +18,7 @@
 		<reflections.version>0.9.9</reflections.version>
 		<druid.version>1.0.31</druid.version>
 		<mysql-connector-java.version>5.1.42</mysql-connector-java.version>
-		<junit.version>4.12</junit.version>
+		<junit.version>4.13.1</junit.version>
 		<HikariCP.version>3.3.1</HikariCP.version>
 	</properties>
 
