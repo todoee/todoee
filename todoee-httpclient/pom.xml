@@ -14,7 +14,7 @@
 	<name>todoee-httpclient</name>
 
 	<properties>
-		<resteasy.version>3.6.1.Final</resteasy.version>
+		<resteasy.version>3.14.0.Final</resteasy.version>
 		<fastjson-jaxrs-json-provider.version>0.3.2</fastjson-jaxrs-json-provider.version>
 	</properties>
 
